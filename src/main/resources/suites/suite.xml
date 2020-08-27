@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Registration suite" verbose="1" parallel="tests">
+
+    <test name="Registration Test 1">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+    <test name="Registration Test 2">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+    <test name="Registration Test 3">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+    <test name="Registration Test 4">
+        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestRegistration"/>
+        </classes>
+    </test>
+
+
+</suite>
