@@ -52,5 +52,4 @@ public class CreateAccountPO extends PageObjectModel {
         submitAccount.click();
     }
 
-
 }

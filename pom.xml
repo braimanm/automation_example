@@ -11,7 +11,7 @@
     <properties>
         <compiler.version>1.8</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ui_auto_core_version>2.5.15</ui_auto_core_version>
+        <ui_auto_core_version>2.5.21</ui_auto_core_version>
     </properties>
 
     <dependencies>
@@ -19,11 +19,6 @@
             <groupId>com.googlecode.page-component</groupId>
             <artifactId>ui_auto_core</artifactId>
             <version>${ui_auto_core_version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.7.1</version>
         </dependency>
     </dependencies>
 

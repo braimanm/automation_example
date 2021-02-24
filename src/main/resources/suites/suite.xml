@@ -16,17 +16,17 @@
         </classes>
     </test>
 
-    <test name="Registration Test 3">
+    <test name="Registration Test BDD 1">
         <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistration"/>
+            <class name="com.yourcompany.example.tests.TestRegistrationBDD"/>
         </classes>
     </test>
 
-    <test name="Registration Test 4">
+    <test name="Registration Test BDD 2">
         <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistration"/>
+            <class name="com.yourcompany.example.tests.TestRegistrationBDD"/>
         </classes>
     </test>
 
