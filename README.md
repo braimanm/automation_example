@@ -10,7 +10,8 @@ The test assumes that Chrome browser is installed on the target machine where th
 Prerequisites:
 1) Install JDK version 8
 2) Install Maven
-3) Optionally you can install IntelliJ and open this project as maven project
+3) Install Git
+4) Optionally you can install IntelliJ and open this project as maven project
 
 To build and execute the solution just follow these steps:
 1)	Clone this repository to your machine `git clone https://github.com/braimanm/automation_example.git`
