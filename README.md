@@ -13,9 +13,10 @@ Prerequisites:
 3) Optionally you can install IntelliJ and open this project as maven project
 
 To build and execute the solution just follow these steps:
-1)	Clone this repository to your machine
-2)	Build the solution by invoking following command:  `mvn clean package`
-3)	Execute the solution by invoking `java -jar target\example.jar`
+1)	Clone this repository to your machine `git clone https://github.com/braimanm/automation_example.git`
+2)	Navigate to project folder `cd automation_example`
+3)	Build the solution by invoking following command:  `mvn clean package`
+4)	Execute the solution by invoking `java -jar target/example.jar`
 
 The test will invoke 5 Chrome browser instances and execute 5 different test cases in parallel.
 At the end of the test, report with execution results will be launched in the default browser.
