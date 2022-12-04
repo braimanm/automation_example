@@ -2,11 +2,8 @@ package com.yourcompany.example.components;
 
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import ui.auto.core.data.DataTypes;
 import ui.auto.core.pagecomponent.PageComponent;
-
-import java.util.List;
 
 public class RadioGroupComponent extends PageComponent {
 
@@ -14,24 +11,17 @@ public class RadioGroupComponent extends PageComponent {
     protected void init() {
     }
 
+    @Override
     public void setValue() {
-        By by = By.xpath(".//div[contains(.,'" + getData() + "')]");
-        WebElement el = coreElement.findElement(by);
-        if (!el.isSelected()) {
-            el.click();
-        }
+        coreElement.findElement(By.xpath(".//input[@value='" + getData() + "']/../span")).click();
     }
 
+    @Override
     public String getValue() {
-        By by = By.xpath(".//span[@class='checked']/../../../label");
-        long t_o = System.currentTimeMillis() + 5000;
-        List<WebElement> elements;
-        do {
-            elements = coreElement.findElements(by);
-        } while (elements.isEmpty() || !elements.get(0).isDisplayed() && System.currentTimeMillis() < t_o);
-        return elements.get(0).getText().trim();
+        return coreElement.findElement(By.cssSelector("input:checked")).getAttribute("value");
     }
 
+    @Override
     public void validateData(DataTypes dataTypes) {
         Assertions.assertThat(getValue()).isEqualTo(getData(dataTypes));
     }

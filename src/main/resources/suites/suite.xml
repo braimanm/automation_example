@@ -1,34 +1,40 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Registration suite" verbose="1" parallel="tests">
+<suite name="Policy suite" verbose="1" parallel="tests">
 
-    <test name="Registration Test 1">
-        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+    <test name="Automobile Policy Creation">
+        <parameter name="data-set" value="data/automobile-data.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistration"/>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Registration Test 2">
-        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+    <test name="Truck Policy Creation">
+        <parameter name="data-set" value="data/truck-data.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistration"/>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Registration Test BDD 1">
-        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+    <test name="Motorcycle Policy Creation">
+        <parameter name="data-set" value="data/motorcycle-data.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistrationBDD"/>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
-    <test name="Registration Test BDD 2">
-        <parameter name="data-set" value="data/registration_data_dynamic.xml"/>
+    <test name="Camper Policy Creation">
+        <parameter name="data-set" value="data/camper-data.xml"/>
         <classes>
-            <class name="com.yourcompany.example.tests.TestRegistrationBDD"/>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
         </classes>
     </test>
 
+    <test name="Dynamic Policy Creation">
+        <parameter name="data-set" value="data/dynamic-data.xml"/>
+        <classes>
+            <class name="com.yourcompany.example.tests.TestInsurancePolicy"/>
+        </classes>
+    </test>
 
 </suite>

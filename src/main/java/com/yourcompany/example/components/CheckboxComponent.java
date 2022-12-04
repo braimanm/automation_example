@@ -12,12 +12,12 @@ public class CheckboxComponent extends PageComponent {
 
     public void setValue() {
         if (!getValue().equals(getData())) {
-            coreElement.click();
+            coreElement.findElement(By.xpath("./..")).click();
         }
     }
 
     public String getValue() {
-        return Boolean.toString(coreElement.findElement(By.tagName("input")).isSelected());
+        return String.valueOf(coreElement.isSelected());
     }
 
     public void validateData(DataTypes dataTypes) {

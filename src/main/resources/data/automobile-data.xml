@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicle-insurance-domain-object>
+    <aliases>
+        <test-name>Create Automobile Insurance Policy</test-name>
+        <url>${env.getUrl()}</url>
+        <startDate>${now.plusDays(40).format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))}</startDate>
+    </aliases>
+    <homePO>
+        <url>${url}</url>
+        <vehicleType>Automobile</vehicleType>
+    </homePO>
+    <vehicleDataPO>
+        <make>Toyota</make>
+        <enginePerformance>52</enginePerformance>
+        <dateOfManufacture>04/24/2018</dateOfManufacture>
+        <numberOfSeats>7</numberOfSeats>
+        <fuelType>Petrol</fuelType>
+        <listPrice>22000</listPrice>
+        <licensePlateNumber>L123F456</licensePlateNumber>
+        <annualMileage>10000</annualMileage>
+        <!-- For Truck and Camper only -->
+v       <payload/>
+        <totalWeight/>
+        <!-- For Motorcycle only -->
+        <model/>
+        <cylinderCapacity/>
+        <!-- For Camper only -->
+        <isRightHandDrive/>
+        <errorCounter>0</errorCounter>
+    </vehicleDataPO>
+    <insurantDataPO>
+        <firstname>John</firstname>
+        <lastname>Smith</lastname>
+        <birthdate>01/01/1990</birthdate>
+        <gender>Male</gender>
+        <streetaddress>103 Center Street</streetaddress>
+        <country>Canada</country>
+        <zipcode>12345</zipcode>
+        <city>Toronto</city>
+        <occupation>Selfemployed</occupation>
+        <!-- Hobbies -->
+        <speeding>true</speeding>
+        <bungeejumping>true</bungeejumping>
+        <cliffdiving>true</cliffdiving>
+        <skydiving>true</skydiving>
+        <other>true</other>
+        <!-- Hobbies End -->
+        <website>http://www.example.com</website>
+        <picture>data/face.png</picture>
+        <errorCounter>0</errorCounter>
+    </insurantDataPO>
+    <productDataPO>
+        <startdate>${startDate}</startdate>
+        <insurancesum>20.000.000,00</insurancesum>
+        <meritrating>Malus 10</meritrating>
+        <damageinsurance>Partial Coverage</damageinsurance>
+        <!-- Optional Products -->
+        <euroProtection>true</euroProtection>
+        <legalDefenseInsurance>true</legalDefenseInsurance>
+        <!-- End Optional Products -->
+        <courtesycar>Yes</courtesycar>
+        <errorCounter>0</errorCounter>
+    </productDataPO>
+    <selectPriceOptionPO>
+        <selectOption>Gold</selectOption>
+        <errorCounter>0</errorCounter>
+    </selectPriceOptionPO>
+    <sendQuotePO>
+        <email>john.smith@gmail.com</email>
+        <phone>444123456</phone>
+        <username>johns</username>
+        <password>John12345</password>
+        <confirmpassword>John12345</confirmpassword>
+        <comments>This is comments</comments>
+        <errorCounter>0</errorCounter>
+        <alert>Sending e-mail success!</alert>
+    </sendQuotePO>
+</vehicle-insurance-domain-object>
+

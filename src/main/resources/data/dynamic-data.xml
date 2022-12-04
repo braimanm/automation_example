@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<vehicle-insurance-domain-object>
+    <aliases>
+        <test-name>Create Random Vehicle Insurance Policy</test-name>
+        <url>${env.getUrl()}</url>
+        <startDate>${now.plusDays(40).format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))}</startDate>
+        <vehicleType>$[CUSTOM_LIST('null','Automobile,Truck,Motorcycle,Camper')]</vehicleType>
+        <make>$[CUSTOM_LIST('null','Audi,BMW,Ford,Honda,Mazda,Mercedes Benz,Nissan,Opel,Porsche,Renault,Skoda,Suzuki,Toyota,Volkswagen,Volvo')]</make>
+        <perf>$[NUMBER('#','50,200')]</perf>
+        <dateOfManufacture>$[DATE('MM/dd/yyyy','2010/01/01|2021/12/31|yyyy/MM/dd')]</dateOfManufacture>
+        <seatsMotorcycle>$[NUMBER('#','1,3')]</seatsMotorcycle>
+        <seats4WheelVehicle>$[NUMBER('#','4,9')]</seats4WheelVehicle>
+        <seats>${vehicleType.equals("Motorcycle") ? seatsMotorcycle : seats4WheelVehicle}</seats>
+        <fuel>$[CUSTOM_LIST('null','Petrol,Diesel,Electric Power,Gas,Other')]</fuel>
+        <fuelType>${vehicleType.equals("Motorcycle") ? "" : fuel}</fuelType>
+        <price>$[NUMBER('#','1000,90000')]</price>
+        <plateNumber>$[ALPHANUMERIC('(A)(B)(C)(D) [a][b][c]','null')]</plateNumber>
+        <licensePlateNumber>${vehicleType.equals("Motorcycle") ? "" : plateNumber}</licensePlateNumber>
+        <mileage>$[NUMBER('#','1000,20000')]</mileage>
+        <motorcycleType>$[CUSTOM_LIST('null','Scooter,Three-Wheeler,Moped,Motorcycle')]</motorcycleType>
+        <model>${vehicleType.equals("Motorcycle") ? motorcycleType : ""}</model>
+        <capacity>$[NUMBER('#','50,800')]</capacity>
+        <cylinderCapacity>${vehicleType.equals("Motorcycle") ? capacity : ""}</cylinderCapacity>
+        <payloadNum>$[NUMBER('#','500,1000')]</payloadNum>
+        <payload>${(vehicleType.equals("Truck") || vehicleType.equals("Camper")) ? payloadNum : ""}</payload>
+        <weight>$[NUMBER('#','2000,10000')]</weight>
+        <totalWeight>${(vehicleType.equals("Truck") || vehicleType.equals("Camper")) ? weight : ""}</totalWeight>
+        <rightHand>$[CUSTOM_LIST('null','No,Yes')]</rightHand>
+        <isRightHandDrive>${vehicleType.equals("Camper") ? rightHand : ""}</isRightHandDrive>
+        <firstName>$[HUMAN_NAMES('{M}','null')]</firstName>
+        <lastName>$[HUMAN_NAMES('{S}','null')]</lastName>
+        <birthDate>$[DATE('MM/dd/yyyy','1960/01/01|2005/12/31|yyyy/MM/dd')]</birthDate>
+        <address>${AddressGen.generateAddress()}</address>
+        <streetNumber>${address.streetNumber}</streetNumber>
+        <streetName>${address.streetName}</streetName>
+        <city>${address.city}</city>
+        <country>Canada</country>
+        <meritRating>${vehicleType.equals("Automobile") ? "Malus 10" : ""}</meritRating>
+        <courtesyCar>${vehicleType.equals("Automobile") ? "Yes" : ""}</courtesyCar>
+    </aliases>
+    <homePO>
+        <url>${url}</url>
+        <vehicleType>${vehicleType}</vehicleType>
+    </homePO>
+    <vehicleDataPO>
+        <make>${make}</make>
+        <enginePerformance>${perf}</enginePerformance>
+        <dateOfManufacture>${dateOfManufacture}</dateOfManufacture>
+        <numberOfSeats>${seats}</numberOfSeats>
+        <fuelType>${fuelType}</fuelType>
+        <listPrice>${price}</listPrice>
+        <licensePlateNumber>${licensePlateNumber}</licensePlateNumber>
+        <annualMileage>${mileage}</annualMileage>
+        <!-- For Truck and Camper only -->
+        <payload>${payload}</payload>
+        <totalWeight>${totalWeight}</totalWeight>
+        <!-- For Motorcycle only -->
+        <model>${model}</model>
+        <cylinderCapacity>${cylinderCapacity}</cylinderCapacity>
+        <!-- For Camper only -->
+        <isRightHandDrive>${isRightHandDrive}</isRightHandDrive>
+    </vehicleDataPO>
+    <insurantDataPO>
+        <firstname>${firstName}</firstname>
+        <lastname>${lastName}</lastname>
+        <birthdate>${birthDate}</birthdate>
+        <gender>Male</gender>
+        <streetaddress>${streetNumber} ${streetName}</streetaddress>
+        <country>${country}</country>
+        <zipcode>12345</zipcode>
+        <city>${city}</city>
+        <occupation>Selfemployed</occupation>
+        <!-- Hobbies -->
+        <speeding>true</speeding>
+        <bungeejumping>true</bungeejumping>
+        <cliffdiving>true</cliffdiving>
+        <skydiving>true</skydiving>
+        <other>true</other>
+        <!-- Hobbies End -->
+        <website>http://www.example.com</website>
+        <picture>data/face.png</picture>
+        <errorCounter>0</errorCounter>
+    </insurantDataPO>
+    <productDataPO>
+        <startdate>${startDate}</startdate>
+        <insurancesum>20.000.000,00</insurancesum>
+        <meritrating>${meritRating}</meritrating>
+        <damageinsurance>Partial Coverage</damageinsurance>
+        <!-- Optional Products -->
+        <euroProtection>true</euroProtection>
+        <legalDefenseInsurance>true</legalDefenseInsurance>
+        <!-- End Optional Products -->
+        <courtesycar>${courtesyCar}</courtesycar>
+        <errorCounter>0</errorCounter>
+    </productDataPO>
+    <selectPriceOptionPO>
+        <selectOption>Gold</selectOption>
+        <errorCounter>0</errorCounter>
+    </selectPriceOptionPO>
+    <sendQuotePO>
+        <email>${firstName}.${lastName}@gmail.com</email>
+        <phone>444123456</phone>
+        <username>johns</username>
+        <password>John12345</password>
+        <confirmpassword>John12345</confirmpassword>
+        <comments>This is comments</comments>
+        <errorCounter>0</errorCounter>
+        <alert>Sending e-mail success!</alert>
+    </sendQuotePO>
+</vehicle-insurance-domain-object>
+
