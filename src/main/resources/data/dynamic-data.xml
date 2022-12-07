@@ -30,7 +30,7 @@
         <isRightHandDrive>${vehicleType.equals("Camper") ? rightHand : ""}</isRightHandDrive>
         <firstName>$[HUMAN_NAMES('{M}','null')]</firstName>
         <lastName>$[HUMAN_NAMES('{S}','null')]</lastName>
-        <birthDate>$[DATE('MM/dd/yyyy','1960/01/01|2005/12/31|yyyy/MM/dd')]</birthDate>
+        <birthDate>$[DATE('MM/dd/yyyy','1960/01/01|2003/12/31|yyyy/MM/dd')]</birthDate>
         <address>${AddressGen.generateAddress()}</address>
         <streetNumber>${address.streetNumber}</streetNumber>
         <streetName>${address.streetName}</streetName>
