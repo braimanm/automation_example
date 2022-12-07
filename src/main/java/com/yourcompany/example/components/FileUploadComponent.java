@@ -25,8 +25,8 @@ public class FileUploadComponent extends PageComponent {
 
     @Override
     public void setValue() {
-        InputStream is  = this.getClass().getClassLoader().getResourceAsStream(filePath.toString());
-        if (is == null) throw new RuntimeException("Resource file '" + filePath.toString() + "' was not found");
+        InputStream is  = this.getClass().getClassLoader().getResourceAsStream(getData());
+        if (is == null) throw new RuntimeException("Resource file '" + getData() + "' was not found");
         File f = filePath.getFileName().toFile();
         try {
             FileUtils.copyInputStreamToFile(is, f);
