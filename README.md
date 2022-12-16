@@ -1,8 +1,5 @@
 # automation_example
-This is an example of testing Tricentis Vehicle Insurance Quote application located at http://sampleapp.tricentis.com/101/
-
-This example is using **selenium-uitaf** open source project for UI test automation, 
-and shows how to use it in business oriented development approach.
+This is a test automation example using the **selenium-uitaf** open source project for UI testing. The test is designed to test the Tricentis Vehicle Insurance Quote application located at http://sampleapp.tricentis.com/101/ using the Chrome browser. 
 
 The test assumes that Chrome browser is installed on the target machine where this test should run.
 <br>This project is targeting Java 8 only!
