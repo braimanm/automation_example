@@ -1,7 +1,7 @@
 # automation_example
 This is a test automation example using the **selenium-uitaf** open source project for UI testing. The test is designed to test the Tricentis Vehicle Insurance Quote application located at http://sampleapp.tricentis.com/101/ using the Chrome browser. 
 
-The test assumes that Chrome browser is installed on the target machine where this test should run and it targeting Java 8 only!
+The test assumes that Chrome browser is installed on the target machine where this test should run and it supported by Java 8 only!
 
 Prerequisites:
 1) Install JDK version 8
