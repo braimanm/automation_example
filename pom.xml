@@ -11,7 +11,7 @@
     <properties>
         <compiler.version>1.8</compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ui_auto_core_version>2.6.1</ui_auto_core_version>
+        <ui_auto_core_version>2.6.2</ui_auto_core_version>
     </properties>
 
     <dependencies>
