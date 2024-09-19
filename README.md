@@ -4,17 +4,36 @@ This is a test automation example using the **selenium-uitaf** open source proje
 The test assumes that Chrome browser is installed on the target machine where this test should run and it supported by Java 8 only!
 
 Prerequisites:
-1) Install JDK version 8
-2) Install Maven
-3) Install Git
-4) Optionally you can install IntelliJ and open this project as maven project
+1. Install JDK version 8
+2. Install Git
+3. Ensure Chrome browser is installed on the machine where the test will run.
+4. Optionally you can install IntelliJ and open this project as maven project
 
 To build and execute the solution just follow these steps:
-1)	Clone this repository to your machine `git clone https://github.com/braimanm/automation_example.git`
-2)	Navigate to project folder `cd automation_example`
-3)	Build the solution by invoking following command:  `mvn clean package`
-4)	Execute the solution by invoking `java -jar target/example.jar`
 
+1. **Clone the repository to your machine:**
+   ```bash
+   git clone https://github.com/braimanm/automation_example.git
+    ```
+2. **Navigate to project folder:**
+    ```bash 
+    cd automation_example
+    ```
+3. **Build the solution:**
+
+    - **For Linux/macOS:**
+   ```bash
+   ./mvnw clean package
+   ```
+    - **For Windows:**
+   ```bash 
+   mvnw.cmd clean package
+   ```
+4. **Execute the solution by invoking:**
+   ```bash
+   java -jar target/example.jar
+   ```
+   
 The test will invoke 5 Chrome browser instances and execute 5 different test cases in parallel.
 At the end of the test, report with execution results will be launched in the default browser.
 
