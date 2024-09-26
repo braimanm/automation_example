@@ -1,11 +1,11 @@
 package com.yourcompany.example.components;
 
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.PageComponent;
+import com.braimanm.ui.auto.utils.WebDriverUtils;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.PageComponent;
-import ui.auto.core.utils.WebHelper;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class MainMenuBarComponent extends PageComponent {
         if (toggleMenuButton.isDisplayed()) {
             navigation = mobileNavigation;
             toggleMenuButton.click();
-            WebHelper.sleep(500); //Wait for menu opening animation to finish
+            WebDriverUtils.sleep(500); //Wait for menu opening animation to finish
         } else {
             navigation = mainNavigation;
         }
@@ -40,7 +40,7 @@ public class MainMenuBarComponent extends PageComponent {
 
     @Override
     public String getValue() {
-        String selectedItem = WebHelper.getWebDriver().findElement(By.cssSelector("span#selectedinsurance")).getText();
+        String selectedItem = WebDriverUtils.getWebDriver().findElement(By.cssSelector("span#selectedinsurance")).getText();
         return selectedItem.replace("Insurance","").trim();
     }
 

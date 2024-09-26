@@ -3,6 +3,7 @@
 <vehicle-insurance-domain-object>
     <aliases>
         <test-name>Create Automobile Insurance Policy</test-name>
+        <test-description>This test is using provided data to complete Automobile insurance quote</test-description>
         <url>${env.getUrl()}</url>
         <startDate>${now.plusDays(40).format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))}</startDate>
     </aliases>

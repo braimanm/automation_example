@@ -1,13 +1,13 @@
 package com.yourcompany.example.domainobjects;
 
+import com.braimanm.ui.auto.context.WebDriverContext;
+import com.braimanm.uitaf.support.DomainObjectModel;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.yourcompany.example.pageobjects.*;
-import ui.auto.core.support.DomainObjectModel;
-import ui.auto.core.support.TestContext;
 
 @SuppressWarnings({"NewClassNamingConvention", "unused"})
 @XStreamAlias("vehicle-insurance-domain-object")
-public class VehicleInsuaranceDO extends DomainObjectModel {
+public class VehicleInsuranceDO extends DomainObjectModel {
     private HomePO homePO;
     private VehicleDataPO vehicleDataPO;
     private InsurantDataPO insurantDataPO;
@@ -15,9 +15,9 @@ public class VehicleInsuaranceDO extends DomainObjectModel {
     private SelectPriceOptionPO selectPriceOptionPO;
     private SendQuotePO sendQuotePO;
 
-    private VehicleInsuaranceDO() {}
+    private VehicleInsuranceDO() {}
 
-    public VehicleInsuaranceDO(TestContext context) {
+    public VehicleInsuranceDO(WebDriverContext context) {
         this.context = context;
     }
 

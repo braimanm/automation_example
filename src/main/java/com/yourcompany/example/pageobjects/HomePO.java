@@ -1,14 +1,15 @@
 package com.yourcompany.example.pageobjects;
 
+import com.braimanm.ui.auto.pagecomponent.AliasedData;
+import com.braimanm.uitaf.support.PageObjectModel;
 import com.yourcompany.example.components.MainMenuBarComponent;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
-import ru.yandex.qatools.allure.annotations.Step;
-import ui.auto.core.support.AliasedString;
-import ui.auto.core.support.PageObjectModel;
+
 
 @SuppressWarnings({"NewClassNamingConvention", "unused"})
 public class HomePO extends PageObjectModel {
-    private AliasedString url;
+    private AliasedData url;
     @FindBy(css = ".bottom-header .container")
     private MainMenuBarComponent vehicleType;
 

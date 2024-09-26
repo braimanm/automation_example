@@ -1,13 +1,13 @@
 package com.yourcompany.example.pageobjects;
 
+import com.braimanm.datainstiller.data.Data;
+import com.braimanm.ui.auto.components.WebComponent;
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.SkipAutoFill;
+import com.braimanm.uitaf.support.PageObjectModel;
 import com.yourcompany.example.components.AlertComponent;
-import datainstiller.data.Data;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
-import ru.yandex.qatools.allure.annotations.Step;
-import ui.auto.core.components.WebComponent;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.SkipAutoFill;
-import ui.auto.core.support.PageObjectModel;
 
 @SuppressWarnings({"NewClassNamingConvention", "unused"})
 public class SendQuotePO extends PageObjectModel {

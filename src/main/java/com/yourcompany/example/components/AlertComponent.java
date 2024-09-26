@@ -1,10 +1,10 @@
 package com.yourcompany.example.components;
 
+import com.braimanm.ui.auto.data.DataTypes;
+import com.braimanm.ui.auto.pagecomponent.PageComponentNoDefaultAction;
 import org.assertj.core.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import ui.auto.core.data.DataTypes;
-import ui.auto.core.pagecomponent.PageComponentNoDefaultAction;
 
 public class AlertComponent extends PageComponentNoDefaultAction {
 

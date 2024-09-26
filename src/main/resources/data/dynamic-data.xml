@@ -3,6 +3,7 @@
 <vehicle-insurance-domain-object>
     <aliases>
         <test-name>Create Random Vehicle Insurance Policy</test-name>
+        <test-description>This test is using dynamically generated data to complete random insurance quote</test-description>
         <url>${env.getUrl()}</url>
         <startDate>${now.plusDays(40).format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))}</startDate>
         <vehicleType>$[CUSTOM_LIST('null','Automobile,Truck,Motorcycle,Camper')]</vehicleType>
@@ -40,7 +41,7 @@
         <courtesyCar>${vehicleType.equals("Automobile") ? "Yes" : ""}</courtesyCar>
     </aliases>
     <homePO>
-        <url>${url}</url>
+        <url initial="initial_url" expected="expected_url" custom="custom_url">${url}</url>
         <vehicleType>${vehicleType}</vehicleType>
     </homePO>
     <vehicleDataPO>

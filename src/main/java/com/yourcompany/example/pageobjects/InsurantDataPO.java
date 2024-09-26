@@ -1,15 +1,15 @@
 package com.yourcompany.example.pageobjects;
 
+import com.braimanm.datainstiller.data.Data;
+import com.braimanm.ui.auto.components.SelectComponent;
+import com.braimanm.ui.auto.components.WebComponent;
+import com.braimanm.ui.auto.pagecomponent.SkipAutoFill;
+import com.braimanm.uitaf.support.PageObjectModel;
 import com.yourcompany.example.components.CheckboxComponent;
 import com.yourcompany.example.components.RadioGroupComponent;
 import com.yourcompany.example.components.FileUploadComponent;
-import datainstiller.data.Data;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
-import ru.yandex.qatools.allure.annotations.Step;
-import ui.auto.core.components.SelectComponent;
-import ui.auto.core.components.WebComponent;
-import ui.auto.core.pagecomponent.SkipAutoFill;
-import ui.auto.core.support.PageObjectModel;
 
 @SuppressWarnings({"NewClassNamingConvention", "unused"})
 public class InsurantDataPO extends PageObjectModel {
